@@ -20,6 +20,8 @@
     
   </head>
   <body>
+ 
+
               <nav class="navbar navbar-default">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,22 +41,13 @@
                 <li><a href="restaurant.php">Restaurant</a></li>
                 <li><a href="uitgaan.php">Uitgaan</a></li>
                 <li><a href="#">Bioscoop</a></li>
-                <li><a href="contact.php">Contact</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
-
-         <img src="img/logobanner.png" alt="Mountain View" class="banner"> 
-      
-        <div class="contact">
-            <h4> Contactgegevens:</h4>
-            <h6>Uitgaanscentrum De Bonte Koe</h6>
-            <h6>Dorpsstraat 14b</h6>
-            <h6>2481BA Woubrugge</h6>
-            <h6>0172-518274</h6>
-            <h6>E-mail: contact@uitgaanscentrumdebontekoe.nl</h6>   
-        </div>
-
+       
+       <img src="img/eind_logo_bontekoe.png" alt="Mountain View" > 
+        <hr class="style_hr">
+       
 
     

@@ -1,23 +1,6 @@
-.contact{
-    margin-left: 1020px;
-    border-style: dotted;
-    border-color: #d8267d;
-    border-width: 4px;
-    height: auto;
-    width: 230px;
-    padding: 
-}
-
-.banner{
-    margin-bottom: 20px;
-    height: 250px;
-    width: 1000px;
-    float: left;
-}
-
 body{
     margin: 50px;
-   background: linear-gradient(#0071a5, white 40%, #ff6a00 150%);
+    background: linear-gradient(#0071a5, white 40%, #ff6a00 150%);
 }
 
 .container-fluid{
@@ -39,7 +22,7 @@ body{
     height:267px;
 }
 #uitgaan{
-    margin-top: 100px;
+    margin-top: 50px;
     float: 50%;
 }
 
@@ -53,4 +36,9 @@ body{
     float: right;
     border-radius: 40px;
     border-style: ridge;
+}
+
+hr.style_hr {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
 }

@@ -4,6 +4,8 @@
     <h6>&#169; Jelle Streekstra en Aranka van der Zwaard Klas AO14A en MD14A 2015/2016</h6>
 </div>
 
+      
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

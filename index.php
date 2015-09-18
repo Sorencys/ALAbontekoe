@@ -11,7 +11,7 @@ include 'header.php';
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="row" style="text-align: center; margin-top:10px;">
         <div class="col-lg-4">
           <img class="img-circle" src="img/restaurant.jpg" alt="Generic placeholder image" width="140" height="140">
           <h2>Restaurant</h2>
