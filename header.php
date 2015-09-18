@@ -45,7 +45,7 @@
           </div><!-- /.container-fluid -->
         </nav>
 
-         <img src="logobanner.png" alt="Mountain View" class="banner"> 
+         <img src="img/logobanner.png" alt="Mountain View" class="banner"> 
       
         <div class="contact">
             <h4> Contactgegevens:</h4>

@@ -38,15 +38,15 @@
 }
 
 .ch-img-1 { 
-	background-image: url(uitgaan.jpg);
+	background-image: url(img/uitgaan.jpg);
 }
 
 .ch-img-2 { 
-	background-image: url(schuurfeest.jpg);
+	background-image: url(img/schuurfeest.jpg);
 }
 
 .ch-img-3 { 
-	background-image: url(urban.jpg);
+	background-image: url(img/urban.jpg);
 }
 .ch-info {
 	position: absolute;
