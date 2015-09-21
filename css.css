@@ -52,3 +52,7 @@ hr.style_hr {
     float: right;
     position: absolute;
 }
+
+.menu_table{
+    margin: 10px;   
+}

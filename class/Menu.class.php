@@ -38,7 +38,7 @@
 		public function returnMenu($menu)
 		{
 			$sql = "SELECT * FROM `menu` WHERE `index`=$menu";
-			$build = "<table><tbody>";
+			$build = "<table class='table'><tbody>";
 			foreach($this->dbh->query($sql) as $row)
 			{
 				$build .= "<tr><td>" . $row['name'] . "</td><td>" . $row['description'] . "</td><td>€" . $row['price'] . "</td></tr>";
