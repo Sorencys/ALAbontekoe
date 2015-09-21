@@ -42,3 +42,13 @@ hr.style_hr {
 	background-color: #fff;
 	border-top: 2px dashed #8c8b8b;
 }
+
+#link_menu{
+    float: left;
+    position: absolute; 
+}
+
+#link_reserveren{
+    float: right;
+    position: absolute;
+}
