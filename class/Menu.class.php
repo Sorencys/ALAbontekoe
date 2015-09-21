@@ -12,14 +12,26 @@
 		{
 			$count = $this->getMenusCount();
 			$sql = "SELECT * FROM `menus` GROUP BY id";
-			$build = "<div>";
+			$build = '
+				<div class="container">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#menu1">Voorgerecht</a></li>
+						<li><a data-toggle="tab" href="#menu2">Hoofdgerecht</a></li>
+						<li><a data-toggle="tab" href="#menu3">Nagerecht</a></li>
+						<li><a data-toggle="tab" href="#menu4">Dranken</a></li>
+					</ul>
+				<div class="tab-content">';
 			foreach($this->dbh->query($sql) as $row)
 			{
-				$build .= "<div id=" . $row['id'] . "><h2>" . $row['name'] . "</h2>";
+				$build .= '<div id="menu' . $row['id'] .'" class="tab-pane fade';
+				if($row['id'] == 1) $build .= ' in active ';
+				$build .= '"><h3>' . $row['name'] . '</h3>';
 				$build .= $this->returnMenu($row['id']);
 				$build .= "</div>";
 			}
-			$build .= "</div>";
+			
+			
+			$build .= "</div></div>";
 			return $build;
 		}
 		
