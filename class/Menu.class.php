@@ -8,19 +8,23 @@
 			$this->dbh = new PDO("mysql:host=$hst;dbname=bontekoe", "$usr", "$pwd");
 		}
 		
+		// returns all menus in a tab format
 		public function returnAllMenu()
 		{
 			$count = $this->getMenusCount();
 			$sql = "SELECT * FROM `menus` GROUP BY id";
-			$build = '
-				<div class="container">
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#menu1">Voorgerecht</a></li>
-						<li><a data-toggle="tab" href="#menu2">Hoofdgerecht</a></li>
-						<li><a data-toggle="tab" href="#menu3">Nagerecht</a></li>
-						<li><a data-toggle="tab" href="#menu4">Dranken</a></li>
-					</ul>
-				<div class="tab-content">';
+			
+			// create the tabs
+			$build = '<div class="container"><ul class="nav nav-tabs">';
+			foreach($this->dbh->query($sql) as $row)
+			{
+				$build .= '<li';
+				if($row['id'] == 1) $build .= ' class="active"';
+				$build .= '><a data-toggle="tab" href="#menu' . $row['id'] . '">' . $row['name'] . '</a></li>';
+			}
+			
+			// create the content in the tabs
+			$build .= '</ul><div class="tab-content">';
 			foreach($this->dbh->query($sql) as $row)
 			{
 				$build .= '<div id="menu' . $row['id'] .'" class="tab-pane fade';
@@ -29,12 +33,11 @@
 				$build .= $this->returnMenu($row['id']);
 				$build .= "</div>";
 			}
-			
-			
 			$build .= "</div></div>";
 			return $build;
 		}
 		
+		// returns menu content
 		public function returnMenu($menu)
 		{
 			$sql = "SELECT * FROM `menu` WHERE `index`=$menu";
@@ -47,6 +50,7 @@
 			return $build;
 		}
 		
+		// returns menu count from database
 		public function getMenusCount()
 		{
 			$sql = "SELECT COUNT(*) FROM menus";
