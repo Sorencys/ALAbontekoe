@@ -58,6 +58,10 @@
 			return $result[0];
 		}
 		
+		public function close()
+		{
+			$dbh = null;
+		}
     }
 
 ?>

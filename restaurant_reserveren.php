@@ -7,7 +7,7 @@ include 'header.php';
 <div> <h1>Reserveren</h1> </div>
 
     
-    <form class="form-horizontal" >
+    <form class="form-horizontal" method="POST" action="class/reserveren.php">
         <label class="col-sm-2 control-label">Datum en Tijd</label>
         <div class="form-group">    
         <script>
@@ -22,22 +22,22 @@ include 'header.php';
       <div class="form-group">
         <label class="col-sm-2 control-label">Aantal personen</label>
         <div class="col-sm-10">
-          <input name='personen' class="form-control" id="inputEmail3" placeholder="Aantal Personen">
+          <input name='personen' type="text" class="form-control" id="inputEmail3" placeholder="Aantal Personen">
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">Volledige Naam</label>
         <div class="col-sm-10">
-          <input name='naam' class="form-control" id="inputPassword3" placeholder="Volledige Naam">
+          <input name='name' type="text" class="form-control" id="inputPassword3" placeholder="Volledige Naam">
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">E-mailadres</label>
         <div class="col-sm-10">
-          <input name='email' class="form-control" id="inputPassword3" placeholder="E-mailadres">
+          <input name='email' type="text" class="form-control" id="inputPassword3" placeholder="E-mailadres">
         </div>
       </div>
-    <textarea name='opmerkingen' class="form-control" style="width:1036px; margin-left:213px;" rows="3" placeholder="Overige Opmerkingen"></textarea>
+    <textarea name='opmerkingen' type="text" class="form-control" style="width:1036px; margin-left:213px;" rows="3" placeholder="Overige Opmerkingen"></textarea>
         <input class="btn btn-default" type="submit" value="Submit">
     </form>
     
