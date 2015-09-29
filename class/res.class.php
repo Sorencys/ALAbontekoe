@@ -17,7 +17,7 @@
 		
 		public function addReservation($count, $name, $email, $comments)
 		{
-			$sql = "INSERT INTO `reservations` (personcount, name, email, comments) VALUES ($count, '$name', '$email', '$comments')";
+			$sql = "INSERT INTO `reservations` (personcount, name, email, comments) VALUES ('$count', '$name', '$email', '$comments')";
 			if ($this->dbh->exec($sql) === TRUE)
 			try
 			{
