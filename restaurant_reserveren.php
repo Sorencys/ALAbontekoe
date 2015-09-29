@@ -3,7 +3,9 @@
 include 'header.php';
 
 ?>
+<script>
 
+</script>
 <div> <h1>Reserveren</h1> </div>
 
     
@@ -38,12 +40,13 @@ include 'header.php';
         </div>
       </div>
     <textarea name='opmerkingen' type="text" class="form-control" style="width:1036px; margin-left:213px;" rows="3" placeholder="Overige Opmerkingen"></textarea>
+        
         <input class="btn btn-default" type="submit" value="Submit">
     </form>
     
 
 
-<?php
+<?php 
 
 include 'footer.php';
 

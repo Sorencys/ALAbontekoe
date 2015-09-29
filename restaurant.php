@@ -9,7 +9,7 @@ include 'header.php';
         <img  id="link_menu" alt="W3Schools" src="img/menu.jpg" style="width:200px; height:200px; margin-left:200px;">
     </a>
     <a href="restaurant_reserveren.php">
-        <img id="link_reserveren" alt="W3Schools" src="img/reserveren.png" style="width:248px; height:75px;margin-left:600px;margin-top:40px;">
+        <img id="link_reserveren" alt="W3Schools" src="img/reserveren.png" style="width:248px; height:75px;margin-left:300px;">
     </a>
 
     <br>
