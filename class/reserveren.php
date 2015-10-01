@@ -17,10 +17,10 @@
 		$db = new Res('localhost:3307', 'root', 'usbw');
 		$db->addReservation($personen, $name, $email, $opmerkingen);
     }
-?>
 
-<!-- Funtie mail sturen
-       /* $to = "rankie32@hotmail.com, $email";
+
+<!-- Funtie mail sturen -->
+    $to = "rankie32@hotmail.com, $email";
         $subject = "Reservering De Bonte Koe";
 
         $message = "
@@ -47,13 +47,13 @@
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
         // More headers
-        $headers .= 'From: <webmaster@example.com>' . "\r\n";
-        $headers .= 'Cc: rankie32@hotmail.com' . "\r\n";
+        $headers .= 'From: <restaurant@uitgaanscentrumdebontekoe.nl>' . "\r\n";
 
         mail($to,$subject,$message,$headers);
 
     }
--->
+?>
+
     <h1> Een mail is verstuurd en de reservering is aangekomen bij De Bonte Koe.</h1>
 <?php
 
