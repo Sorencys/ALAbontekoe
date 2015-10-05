@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 18 sep 2015 om 15:16
+-- Genereertijd: 05 okt 2015 om 11:31
 -- Serverversie: 5.6.13
 -- PHP-versie: 5.4.17
 
@@ -35,18 +35,21 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `description` text NOT NULL,
   `index` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `menu`
 --
 
 INSERT INTO `menu` (`id`, `name`, `price`, `description`, `index`) VALUES
-(1, 'Test eten 1', '11.50', 'Dit is test eten 1', 1),
-(2, 'Test eten 2', '40.00', 'dit is test eten 2', 2),
-(3, 'test eten 3', '2.50', 'thasjdfasjfhsdjhfejjjd', 3),
-(4, 'test eten 503', '200.00', 'test eten nummer heel veel', 4),
-(5, 'thing 64', '64.00', 'test eten 64', 2);
+(1, 'Soep van de Dag', '6.00', 'Vraag bij de Ober naar de Soep van de Dag.', 1),
+(2, 'Biefstuk met Roomsaus', '16.00', 'Biefstuk met een Roomsaus. Kies uit Rare, Medium Rare of Medium.', 2),
+(3, 'Dame Blance', '5.00', '3 Bolletjes Vanille ijs en 1 Bolletje chocolade ijs, met een warme chocolade saus.', 3),
+(4, 'Bier', '2.00', 'Lekker biertje (0,4 ML)', 4),
+(5, 'Salade', '14.00', 'Salade met lekkere dressing, croutons en kip.', 2),
+(6, 'Knoflook brood', '4.00', 'Knoflook brood met Aolie en een andere Tapas saus naar keuze', 1),
+(7, 'Water', '1.00', 'Water van Chaufontaine.', 4),
+(8, 'Sorbet', '3.00', 'Vanille ijs, Vers fruit', 3);
 
 -- --------------------------------------------------------
 
@@ -69,6 +72,30 @@ INSERT INTO `menus` (`id`, `name`) VALUES
 (2, 'Hoofdgerecht'),
 (3, 'Nagerecht'),
 (4, 'Dranken');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `reservations`
+--
+
+CREATE TABLE IF NOT EXISTS `reservations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `datum` date NOT NULL,
+  `time` time NOT NULL,
+  `personcount` int(11) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `comments` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `reservations`
+--
+
+INSERT INTO `reservations` (`id`, `datum`, `time`, `personcount`, `name`, `email`, `comments`) VALUES
+(7, '2015-11-20', '12:30:00', 2, 'Aranka', 'rankie32@hotmail.com', '-');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

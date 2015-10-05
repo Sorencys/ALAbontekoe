@@ -15,11 +15,11 @@
 			$$k = $v;
 		
 		$db = new Res('localhost:3307', 'root', 'usbw');
-		$db->addReservation($personen, $name, $email, $opmerkingen);
+		$db->addReservation($date, $time, $personen, $name, $email, $opmerkingen);
     }
 
 
-<!-- Funtie mail sturen -->
+
     $to = "rankie32@hotmail.com, $email";
         $subject = "Reservering De Bonte Koe";
 
@@ -51,7 +51,7 @@
 
         mail($to,$subject,$message,$headers);
 
-    }
+
 ?>
 
     <h1> Een mail is verstuurd en de reservering is aangekomen bij De Bonte Koe.</h1>
